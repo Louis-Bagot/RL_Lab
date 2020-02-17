@@ -16,14 +16,13 @@ git clone https://github.com/<username>/RL_Lab.git
 ```
 <br>
 `cd` into cloned repo:
-```
-cd <folder_name>
-```
+`cd <folder_name>`
 
 Obviously setting up SSH for interacting with github is a much more secure and hassle free way.
 So, it is highly recommended that you setup ssh for bitbucket using: [Setting up SSH - bit bucket](https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html/).
 
 <br>
+
 Set the `upstream` to this repo:
 
 The easiest way is to use the https url:
@@ -37,19 +36,25 @@ git remote add upstream ssh_url_of_repo
 ```
 
 <br>
+
 Lab assignments and exercises will always be in *master* branch.
 You should always create a new in your forked repo for any new piece of assignment or work branching from *master* branch:
+
 ```
 git branch new_branch
 ```
+
 **NOTE:** You must not mess with `master` branch or BAD THINGS will happen.
 *master* branch will only contain exercises, so just leave it be.
 
 Before starting any new piece of work, move to *master* branch:
+
 ```
 git checkout master
 ```
+
 <br>
+
 Now you can fetch latest changes from main repo using:
 
 ```
@@ -57,20 +62,29 @@ git fetch upstream
 ```
 
 <br>
+
 `merge` the latest code with *master* branch:
+
 ```
 git merge upstream/master
 ```
+
 <br>
+
 `checkout` to your newly created branch:
+
 ```
 git checkout new_branch
 ```
+
 <br>
+
 Rebase the code of *new_branch* from the code in *master* branch, run the `rebase` command from your current branch:
+
 ```
 git rebase master
 ```
+
 Now all your changes on your current branch will be based on the top of the changes in *master* branch.
 
 Push your changes to your forked repo
@@ -78,6 +92,7 @@ Push your changes to your forked repo
 git push origin new_branch
 ```
 <br>
+
 w.r.t the assesment you would be asked to submit your code, instructions will follow in a seperate markdown document.
 
 ## A note about Commit Messages:
