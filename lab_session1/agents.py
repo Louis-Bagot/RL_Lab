@@ -7,8 +7,6 @@ An example can be seen on the Bandit_Agent and Random_Agent classes.
 """
 # -*- coding: utf-8 -*-
 import numpy as np
-from utils import my_random_choice
-import time
 
 class Bandit_Agent(object):
     """
@@ -19,15 +17,18 @@ class Bandit_Agent(object):
     The minimum requirment to instantiate a child class of Bandit_Agent
     is that it implements the act() method.
     """
-    def __init__(self, k:int):
+    def __init__(self, k:int, **kwargs):
         """
         Simply stores the number of arms of the Bandit problem.
+        The __init__() method generally handles hyperparameters.
         Parameters
         ----------
         k: positive int
             Number of arms of the Bandit problem.
+        kwargs: dictionary
+            Additional parameters, ignored.
         """
-        assert isinstance(int, k) and k >=0, "Invalid k:{}".format(k)
+        assert isinstance(k, int) and k >=0, "Invalid k:{}".format(k)
         self.k = k
 
     def reset(self):
@@ -35,6 +36,7 @@ class Bandit_Agent(object):
         Reinitializes the agent to 0 knowledge, good as new.
 
         No inputs or outputs.
+        The reset() method handles variables.
         """
         pass
 
@@ -49,8 +51,8 @@ class Bandit_Agent(object):
             Reward for having performed action a.
         """
 
-        assert isinstance(int, a) and self.k >= a, "Invalid action: {}".format(a)
-        assert isinstance(float, r), "Invalid reward: {}".format(r)
+        assert isinstance(a, int) and self.k >= a, "Invalid action: {}".format(a)
+        assert isinstance(r, float), "Invalid reward: {}".format(r)
         pass
 
     def act(self) -> int:
@@ -61,7 +63,7 @@ class Bandit_Agent(object):
         a : positive int < k
             The action the agent chose to perform.
         """
-        raise NotImplementedError("Calling act in Abstract class Bandit_Agent")
+        raise NotImplementedError("Calling method act() in Abstract class Bandit_Agent")
 
 class Random_Agent(Bandit_Agent):
     """
@@ -78,6 +80,11 @@ class Random_Agent(Bandit_Agent):
         return np.random.randint(self.k)
 
 
+class EpsGreedy_SampleAverage:
+    # TODO: implement this class following the formalism above.
+    pass
+
+
 class EpsGreedy:
     # TODO: implement this class following the formalism above.
     pass
@@ -88,11 +95,11 @@ class OptimisticGreedy:
     pass
 
 
-class Gradient_Bandit:
+class UCB:
     # TODO: implement this class following the formalism above.
     pass
 
 
-class UCB:
+class Gradient_Bandit:
     # TODO: implement this class following the formalism above.
     pass

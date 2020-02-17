@@ -1,4 +1,10 @@
-from utils import assert_not_abstract, str2class
+"""
+Module containing the k-armed bandit problem
+Complete the code wherever TODO is written.
+Do not forget the documentation for every class and method!
+We expect all classes to follow the Bandit abstract object formalism.
+"""
+# -*- coding: utf-8 -*-
 import numpy as np
 
 class Bandit(object):
@@ -6,13 +12,15 @@ class Bandit(object):
     Abstract concept of a Bandit, i.e. Slot Machine, the Agent can pull.
 
     A Bandit is a distribution over reals.
+    The children of this class are meant to be used as part of a set
+    in a k-armed bandit.
     The pull() method samples from the distribution to give out a reward.
     """
     def __init__(self):
         """
-        Simply calls the reset() method.
+        Initializes the bandit.
         """
-        self.reset()
+        pass
 
     def reset(self):
         """
@@ -24,7 +32,7 @@ class Bandit(object):
         """
         Returns a sample from the distribution.
         """
-        raise NotImplementedError("Calling pull in Abstract class Bandit")
+        raise NotImplementedError("Calling method pull() in Abstract class Bandit")
 
 class Gaussian_Bandit:
     # TODO: implement this class following the formalism above.
@@ -39,6 +47,7 @@ class Gaussian_Bandit_NonStat:
 class KBandit:
     # TODO: implement this class following the formalism above.
     # Reminder: The k-armed Bandit is a set of k Bandits.
+    # In this case we mean for it to be a set of Gaussian_Bandits.
     pass
 
 
