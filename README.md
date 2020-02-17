@@ -117,6 +117,7 @@ RL_Lab
 ```
 
 w.r.t the assesment you would be asked to submit your code, instructions will follow in a seperate markdown document.
+your code will be accessed only when you open pull request and mark the reviewer.
 
 ## A note about Commit Messages:
 * Commit messages shouldn't span for more than 7-8 words
