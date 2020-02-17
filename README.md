@@ -18,8 +18,9 @@ git clone https://github.com/<username>/RL_Lab.git
 `cd` into cloned repo:
 `cd <folder_name>`
 
+
 Obviously setting up SSH for interacting with github is a much more secure and hassle free way.
-So, it is highly recommended that you setup ssh for bitbucket using: [Setting up SSH - bit bucket](https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html/).
+So, it is highly recommended that you setup ssh for github/bitbucket using: [How to set up SSH - bit bucket](https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html/).
 
 <br>
 
@@ -71,7 +72,7 @@ git merge upstream/master
 
 <br>
 
-`checkout` to your newly created branch:
+`checkout` to your newly created branch (your branch name ideally will be your `lab_session/student_number`) :
 
 ```
 git checkout new_branch
@@ -92,6 +93,28 @@ Push your changes to your forked repo
 git push origin new_branch
 ```
 <br>
+
+Open a pull request to the master branch so that we can check your code. You are expected to follow following topology
+
+```
+RL_Lab
+│   README.md
+│   Lab_session1   
+│   Lab_session2   
+│
+└─── Student_number_1
+│   │   
+│   └───Lab_session1
+│       │   code_1
+│       │   code_2
+│       │   ...
+│─── Student_number_2
+│   │   
+│   └───Lab_session1
+│       │   code_1
+│       │   code_2
+│       │   ...
+```
 
 w.r.t the assesment you would be asked to submit your code, instructions will follow in a seperate markdown document.
 
