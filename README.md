@@ -51,9 +51,11 @@ git checkout master
 ```
 <br>
 Now you can fetch latest changes from main repo using:
+
 ```
 git fetch upstream
 ```
+
 <br>
 `merge` the latest code with *master* branch:
 ```
