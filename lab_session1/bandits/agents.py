@@ -7,6 +7,7 @@ An example can be seen on the Bandit_Agent and Random_Agent classes.
 """
 # -*- coding: utf-8 -*-
 import numpy as np
+from utils import softmax, my_random_choice
 
 class Bandit_Agent(object):
     """
@@ -15,12 +16,12 @@ class Bandit_Agent(object):
     Contains the methods learn() and act() for the base life cycle of an agent.
     The reset() method reinitializes the agent.
     The minimum requirment to instantiate a child class of Bandit_Agent
-    is that it implements the act() method.
+    is that it implements the act() method (see Random_Agent).
     """
     def __init__(self, k:int, **kwargs):
         """
         Simply stores the number of arms of the Bandit problem.
-        The __init__() method generally handles hyperparameters.
+        The __init__() method handles hyperparameters.
         Parameters
         ----------
         k: positive int
@@ -28,7 +29,6 @@ class Bandit_Agent(object):
         kwargs: dictionary
             Additional parameters, ignored.
         """
-        assert isinstance(k, int) and k >=0, "Invalid k:{}".format(k)
         self.k = k
 
     def reset(self):
@@ -50,9 +50,6 @@ class Bandit_Agent(object):
         r: float
             Reward for having performed action a.
         """
-
-        assert isinstance(a, int) and self.k >= a, "Invalid action: {}".format(a)
-        assert isinstance(r, float), "Invalid reward: {}".format(r)
         pass
 
     def act(self) -> int:
@@ -68,6 +65,7 @@ class Bandit_Agent(object):
 class Random_Agent(Bandit_Agent):
     """
     This agent doesn't learn, just acts purely randomly.
+    Good baseline to compare to other agents.
     """
     def act(self):
         """
@@ -82,16 +80,19 @@ class Random_Agent(Bandit_Agent):
 
 class EpsGreedy_SampleAverage:
     # TODO: implement this class following the formalism above.
+    # This class uses Sample Averages to estimate q; others are non stationary.
     pass
 
 
 class EpsGreedy:
     # TODO: implement this class following the formalism above.
+    # Non stationary agent with q estimating and eps-greedy action selection.
     pass
 
 
 class OptimisticGreedy:
     # TODO: implement this class following the formalism above.
+    # Same as above but with optimistic starting values.
     pass
 
 
@@ -102,4 +103,7 @@ class UCB:
 
 class Gradient_Bandit:
     # TODO: implement this class following the formalism above.
+    # If you want this to run fast, use the my_random_choice function from
+    # utils instead of np.random.choice to sample from the softmax
+    # You can also find the softmax function in utils.
     pass
