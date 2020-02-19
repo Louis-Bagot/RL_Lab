@@ -1,6 +1,12 @@
-# Virtual Environment
+# Lab Session 1
 
-This part is a quick tutorial how you'll work in virtual environment, and avoid breaking global environment.
+## Instructions
+*Once the matplotlib and numpy tutorials* have ended, please find the instructions for the lab session in the intructions.md file.
+Once all code has been implemented, you can submit the zipped file to blackboard.
+
+## Virtual Environment
+
+This part is a quick tutorial on how you'll work in virtual environment, and avoid breaking the global environment.
 It's highly advisable you use it for all your work.
 
 please name your virtual environment `RLenv`
