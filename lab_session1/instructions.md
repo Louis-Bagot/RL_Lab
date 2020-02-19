@@ -7,7 +7,7 @@ In this Lab exercise you'll be introduced to:
 ### Instructions
 In this lab session you will have to implement Bandit algorithms, Bandits (aka slot machines) and the learning loop of the agents. The code is divided in 4 modules, and you will have to complete the code in the 3 first ones:
 
-#### launcher.py
+#### Module 1: launcher.py
 This module controls the hyperparametrs, main loops, and plotting.  
 
 ##### General functionning
@@ -22,7 +22,7 @@ Note that you cannot run the code before you implement at least
 ##### TODO
 You only have to fill in the *run_bandit* function. The details of the function are in its documentation.
 
-#### bandit.py
+#### Module 2: bandit.py
 This module contains the "Slot Machines" of the problem.
 A Slot Machine is actually called a "bandit" because it steals money from the gambler's pockets, apparently.
 
@@ -42,7 +42,7 @@ All the classes should be children (or grand-) of the abstract Bandit class, to 
 Once the KBandit and run_bandit class and function have been implemented, you can try to run the Random_Agent (given as an example) by selecting `launch_type='mutiple_agents'` and only un-commenting the `Random_Agent` from the list of `agents`. You can set as output file_name, for example 'random_agent'.
 Do the results make sense?
 
-#### agents.py
+#### Module 3: agents.py
 This module contains the agents, or algorithms, that are meant to solve the Bandit problems implemented above.
 
 ##### General functionning
@@ -58,7 +58,7 @@ The agent classes you will have to implement are:
 * `UCB` - selecting action greedily according to Q + U where U is a count-based bonus on rarely tried action
 * `Gradient` - keeping up advantages vector H for each action, action selection samples from softmax(H)
 
-#### utils.py
+#### Module 4: utils.py
 Contains the plotting functions, some useful functions like the softmax or my_random_choice.
 You *don't need to do anything* here. Enjoy!
 
