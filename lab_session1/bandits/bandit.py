@@ -48,11 +48,40 @@ class Gaussian_Bandit_NonStat:
     # with increments following N(m=0,std=0.01)
     pass
 
-class KBandit:
-    # TODO: implement this class following the formalism above.
-    # Reminder: The k-armed Bandit is a set of k Bandits.
-    # In this case we mean for it to be a set of Gaussian_Bandits.
-    pass
+class KBandit(Bandit):
+    """ Set of k Gaussian_Bandits. """
+    def __init__(self, k, **kwargs):
+        """
+        Instantiates the k-armed bandit, with a number of arms, and initializes
+        the set of bandits to new gaussian bandits in a bandits list.
+        The reset() method is supposedly called from outside.
+        Parameters
+        ----------
+        k: positive int
+            Number of arms of the problem.
+        """
+        self.k = k
+        self.bandits = [Gaussian_Bandit() for _ in range(self.k)]
+
+    def reset(self):
+        """ Resets each of the k bandits. """
+        for bandit in self.bandits:
+            bandit.reset()
+        self.best_action = np.argmax([bandit.mean for bandit in self.bandits]) # printing purposes
+
+    def pull(self, action:int) -> float:
+        """
+        Pulls the lever from Bandit #action. Returns the reward.
+        Parameters
+        ----------
+        action: positive int < k
+            Lever to pull.
+        Returns
+        -------
+        reward : float
+            Reward for pulling this lever.
+        """
+        return self.bandits[action].pull()
 
 
 class KBandit_NonStat:
