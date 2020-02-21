@@ -32,7 +32,7 @@ All the subsequent classes should be child classes of Bandit.
 
 ##### TODO
 You need to implement the following classes:
-* `Gaussian_Bandit` - the machine's reward distribution is a Gaussian N(m,1) around a fixed mean m~N(1,0)
+* `Gaussian_Bandit` - the machine's reward distribution is a Gaussian N(m,1) around a fixed mean m~N(0,1)
 * `Gaussian_Bandit_NonStat` - a Gaussian_Bandit whose mean moves~N(0,std=0.01) after each pull (of any other arm also)
 * `KBandit` - a k-armed bandit, i.e. a set of k Gaussian_Bandits
 * `KBandit_NonStat` - a KBandit, but with Non Stationary Bandits, i.e. the distributions move every pull.
