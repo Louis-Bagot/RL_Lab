@@ -1,34 +1,24 @@
-# Virtual Environment
+# Lab Session 1
 
-This part is a quick tutorial how you'll work in virtual environment, and avoid breaking global environment.
-It's highly advisable you use it for your own PC.
+## Instructions
+*Once the matplotlib and numpy tutorials* have ended, please find the instructions for the lab session in the intructions.md file.
+Once all code has been implemented, you can submit the zipped file to blackboard.
 
-Let's hope virtualenv is installed on your local machine.
+## Virtual Environment
 
-check if it's installed 
-`virtualenv --version`
+This part is a quick tutorial on how you'll work in virtual environment, and avoid breaking the global environment.
+It's highly advisable you use it for all your work.
 
-if not then we are probably out of luck. But let's check if we can install it?
-
-```
-pip install virtualenv
-```
+please name your virtual environment `RLenv`
 
 ### Create Virtualenv
 
-`virtualenv <name>`
+`conda create -n RLenv`
 
 ### Activate Virtualenv
 
-if your virtualenv is not in home.
-
-`source <path_to_name>/<name>/bin/activate`
-
-or 
-When your virtualenv is at home
-
-`source <name>/bin/activate` 
+`source activate RLenv`
 
 ### Install the dependencies
 
-`pip install -r requirements.txt`
+`pip install -r requirements.txt --user`
