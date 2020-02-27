@@ -31,7 +31,8 @@ https://www.theverge.com/2017/7/21/16007680/lg-airport-robot-cleaning-guide-sout
 3) While designing the MDP, ignore the feature of the cleaning robot mentioned in the article as "detects the areas that require the most frequent cleaning, stores those locations in its database and calculates the most efficient routes to get there." Just use a general "clean" action.
 
 ### 3rd problem:
-``        |||
+```
+          |||
           |||
           _._
         .' ..`.
@@ -41,7 +42,7 @@ https://www.theverge.com/2017/7/21/16007680/lg-airport-robot-cleaning-guide-sout
           0 0
          0 0 0   <--- pins
         0 0 0 0
-``
+```
 We want to model the game of bowling, but we will need to severely simplify it.
 The scoring system is quite complex, so let's just say the goal is to hit all the pins in the least tries possible.
 The player can choose to throw the ball {left, middle, right}, but the transitions are highly stochastic (player's skill and consistency; hard to know the precise outcome of a throw).
