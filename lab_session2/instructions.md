@@ -30,7 +30,7 @@ https://www.theverge.com/2017/7/21/16007680/lg-airport-robot-cleaning-guide-sout
 2) Based on these, you have to design an MDP for a rechargable battery powered L.G Robot. The robot strictly operates inside the airport with access to only the Reception, Terminal and Charging Station. Assuming you are Principle machine learning engineer within the company, your MDP needs to propose a robot that combines the properties of both Cleaning and Guide robots. The robot can choose to escort the user to the terminal and every interaction with the user has feedback in (-1, 0, +1) (always provided).
 3) While designing the MDP, ignore the feature of the cleaning robot mentioned in the article as "detects the areas that require the most frequent cleaning, stores those locations in its database and calculates the most efficient routes to get there." Just use a general "clean" action.
 
-### 3rd problem:
+### 3rd problem: Bowling
 ```
           |||
           |||
