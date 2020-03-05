@@ -21,7 +21,7 @@ It's mandatory to use numpy for all your work.
 
 You'll work with **q_learning_deterministic.py** and implement the agent(all functions) in the frozen lake environment of the gym. FrozenLake environment is a grid world environment. The goal of this exercise is to make you familiar with q-learning. You'll code the agent class that will learn from the Environment.
 
-Short description of the environment
+Short description of the environment. (play with gym_taxi.py to understand the representation )
 
 **Grid elements**
 `H` -> Hole
