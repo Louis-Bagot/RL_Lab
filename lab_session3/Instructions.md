@@ -29,6 +29,13 @@ Short description of the environment
 `2` -> Right
 `3` -> Up
 
+```
+SFFF       (S: starting point, safe)
+FHFH       (F: frozen surface, safe)
+FFFH       (H: hole, fall to your doom)
+HFFG       (G: goal, where the frisbee is located)
+```
+
 short description of the functions to be implemented:-
 
 ##### act()
