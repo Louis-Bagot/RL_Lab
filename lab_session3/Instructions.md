@@ -7,7 +7,7 @@ In this lab session you'll be introduced to:
 3) Q-Learning.
 
 The lab is divided in 2 parts, the first part will not be graded. The second part of the lab will be.
-We have included 2 small examples of gym:-
+We have included 2 small examples of gym:- <br>
 gym_intro.py :- a small example of how to load 2 different envs. you are encouraged to explore them.
 gym_taxi.py :- a taxi grid world that randomly choses an action. 
 
