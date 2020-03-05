@@ -40,8 +40,8 @@ frames = [] # for animation
 done = False
 
 while not done:
-    action = env.action_space.sample()
-    new_state, reward, done, info = env.step(action)
+    action = env.action_space.sample() # returns a random action(0-5)
+    new_state, reward, done, info = env.step(action) # take the action and get reward and next state
 
     if reward == -10:
         penalties += 1
