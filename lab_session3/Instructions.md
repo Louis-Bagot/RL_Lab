@@ -6,6 +6,10 @@ In this lab session you'll be introduced to:
 2) Gym's API
 3) Q-Learning.
 
+The lab is divided in 2 parts, the first part will not be graded. The second part of the lab will be.
+We have included 2 small examples of gym:-
+gym_intro.py :- a small example of how to load 2 different envs. you are encouraged to explore them.
+gym_taxi.py :- a taxi grid world that randomly choses an action. 
 
 #### Q-Learning
 This part will be graded. The submission deadline will be Sunday midnight(8th March 2020). 

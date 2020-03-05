@@ -41,7 +41,7 @@ done = False
 
 while not done:
     action = env.action_space.sample()
-    state, reward, done, info = env.step(action)
+    new_state, reward, done, info = env.step(action)
 
     if reward == -10:
         penalties += 1
@@ -49,7 +49,7 @@ while not done:
     # Put each rendered frame into dict for animation
     frames.append({
         'frame': env.render(mode='ansi'),
-        'state': state,
+        'state': new_state,
         'action': action,
         'reward': reward
 		}
