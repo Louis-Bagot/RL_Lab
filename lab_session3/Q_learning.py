@@ -58,17 +58,15 @@ class Agent(object):
         self.min_epsilon = 0.01            # Minimum exploration probability
         self.decay_rate = 0.001             # Exponential decay rate for exploration prob
 
-    def act(self, state, exp_exp_tradeoff):
+    def act(self, state):
         """
-        Function where agent acts.
+        Function where agent acts with policy eps-greedy.
+        Epsilon is updated outside this method.
 
         Parameters
         ----------
         state: numpy int64
             current state of the environment
-
-        exp_exp_tradeoff: float
-            exploration and exploitation tradeoff
 
         Returns
         -------
