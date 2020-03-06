@@ -57,7 +57,7 @@ The function is already implemented. It decreases the exploratory beahiour of th
 Implement the Q-learning for 4x4 grid world, Currently all the hyperparameters have been set to solve  4x4 gridworld
 Try training an agent on 8x8 grid world with different hyperparameters like epsilon decay_rate, learning rate, max_steps and number of episodes. Submit a short paragraph explaining the behaviour. 
 To run the 8x8 environment **uncomment** the line 
-`kwargs = {'map_name': '8x8', 'is_slippery': False}`
+`kwargs = {'map_name': '8x8', 'is_slippery': True}`
 
 
 For more information on environment please visit (https://gym.openai.com/envs/FrozenLake-v0/)
