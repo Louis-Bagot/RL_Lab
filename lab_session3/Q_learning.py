@@ -10,7 +10,7 @@ from gym.envs.registration import register
 # 4x4 environment
 kwargs = {'map_name': '4x4', 'is_slippery': False}
 # 8x8 environment
-# kwargs = {'map_name': '8x8', 'is_slippery': False}
+# kwargs = {'map_name': '8x8', 'is_slippery': True}
 register(
     id='FrozenLakeNotSlippery-v0',
     entry_point='gym.envs.toy_text:FrozenLakeEnv',
