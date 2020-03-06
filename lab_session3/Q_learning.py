@@ -185,7 +185,7 @@ class Trainer(object):
             episode += 1
 
             # update your exploration rate
-            agent.update_epsilon(episode)
+            self.agent.update_epsilon(episode)
 
             # global reward
             rewards.append(self.total_rewards)
