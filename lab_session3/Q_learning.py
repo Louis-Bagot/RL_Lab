@@ -31,7 +31,7 @@ state_size = env.observation_space.n
 
 # TODO Declare your q-table based on number of states and actions.
 
-qtable = 
+qtable =
 
 
 class Agent(object):
@@ -219,7 +219,8 @@ def test():
             new_state, reward, done, info = env.step(action)
             print(reward)
             if done:
-                print('\n \x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+                if reward == 1:
+                    print('\n \x1b[6;30;42m' + 'Success!' + '\x1b[0m')
                 action = np.argmax(qtable[state, :])
                 print(action)
                 env.render()
