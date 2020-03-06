@@ -170,7 +170,7 @@ class Trainer(object):
 
                 # update your qtable
                 self.agent.learn(
-                    state, action, new_state, reward)
+                    state, action, reward, new_state)
 
                 # move your agent to new state
                 state = new_state
@@ -197,7 +197,7 @@ class Trainer(object):
         print(self.agent.qtable)
 
         # printing epsilon
-        print(self.epsilon)
+        print(self.agent.epsilon)
 
         return self.qtable
 
@@ -238,8 +238,8 @@ if __name__ == '__main__':
     # reset environment and test
     env.reset()
     env.render()
-    if kwargs['map_name'] = '4x4':
+    if kwargs['map_name'] == '4x4':
         print(np.argmax(qtable, axis=1).reshape(4, 4))
-    elif kwargs['map_name'] = '8x8':
+    elif kwargs['map_name'] == '8x8':
         print(np.argmax(qtable, axis=1).reshape(8, 8))
     test()
