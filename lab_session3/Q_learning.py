@@ -161,7 +161,7 @@ class Trainer(object):
                 exp_exp_tradeoff = random.uniform(0, 1)
 
                 # take an action
-                action = self.agent.act(state, exp_exp_tradeoff)
+                action = self.agent.act(state)
 
                 # get feedback from environment
                 new_state, reward, done, info = env.step(action)
