@@ -7,9 +7,9 @@ In this lab session you'll be introduced to:
 3) Q-Learning.
 
 The lab is divided in 2 parts, the first part will not be graded. The second part of the lab will be.
-We have included 2 small examples of gym:-
-gym_intro.py :- a small example of how to load 2 different envs. you are encouraged to explore them.
-gym_taxi.py :- a taxi grid world that randomly choses an action. 
+We have included 2 small examples of gym:- <br>
+**gym_intro.py** :- a small example of how to load 2 different envs. you are encouraged to explore them. <br>
+**gym_taxi.py** :- a taxi grid world that randomly choses an action. 
 
 #### Q-Learning
 This part will be graded. The submission deadline will be Sunday midnight(8th March 2020). 
@@ -19,9 +19,9 @@ This part will be graded. The submission deadline will be Sunday midnight(8th Ma
 It's mandatory to use numpy for all your work.
 ```
 
-You'll implement the agent(all functions) in the frozen lake environment of the gym. FrozenLake environment is a grid world environment. The goal of this exercise is to make you familiar with Gym and q-learning. You'll code the agent class that will learn from the Environment.
+You'll work with **q_learning_deterministic.py** and implement the agent(all functions) in the frozen lake environment of the gym. FrozenLake environment is a grid world environment. The goal of this exercise is to make you familiar with q-learning. You'll code the agent class that will learn from the Environment.
 
-Short description of the environment
+Short description of the environment. (play with gym_taxi.py to understand the representation )
 
 **Grid elements**
 `H` -> Hole
