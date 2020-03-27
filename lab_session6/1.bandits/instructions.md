@@ -3,6 +3,7 @@ This is exactly the same API as you used before - barely any changes have been m
 
 ## Implementation
 You have to implement Eps Greedy with both Sample Average and Weighted Average.
+Please use learning rate lr=0.1
 If you believe your previous code was alright, you can reuse it.
 
 You have to implement the Mixture_Bandit_NonStat class.
