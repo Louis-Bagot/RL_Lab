@@ -484,7 +484,7 @@ if __name__ == '__main__':
     a = None
     if opts.agent == 'value':
         a = valueIterationAgents.ValueIterationAgent(mdp, opts.discount, opts.iters)
-    if opts.agent == 'policy':
+    elif opts.agent == 'policy':
         a = policyIterationAgents.PolicyIterationAgent(mdp, opts.discount, opts.iters)
     elif opts.agent == 'q':
         #env.getPossibleActions, opts.discount, opts.learningRate, opts.epsilon
