@@ -484,7 +484,7 @@ if __name__ == '__main__':
     a = None
     if opts.agent == 'value':
         a = valueIterationAgents.ValueIterationAgent(mdp, opts.discount, opts.iters)
-    if opts.agent == 'policy':
+    elif opts.agent == 'policy':
         a = policyIterationAgents.PolicyIterationAgent(mdp, opts.discount, opts.iters)
     elif opts.agent == 'q':
         #env.getPossibleActions, opts.discount, opts.learningRate, opts.epsilon
@@ -522,7 +522,7 @@ if __name__ == '__main__':
     ###########################
     # DISPLAY Q/V VALUES BEFORE SIMULATION OF EPISODES
     try:
-        if not opts.manual and opts.agent == 'value':
+        if not opts.manual and opts.agent in ['value', 'policy']:
             if opts.valueSteps:
                 for i in range(opts.iters):
                     tempAgent = valueIterationAgents.ValueIterationAgent(mdp, opts.discount, i)
