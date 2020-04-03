@@ -79,6 +79,6 @@ RL_Lab
 │       │   ...
 ```
 
-w.r.t the assesment you would be asked to submit your code, instructions will follow in a seperate markdown document.
+w.r.t the assesment you would be asked to submit your code, instructions will follow in a seperate PDF/markdown document.
 
 
