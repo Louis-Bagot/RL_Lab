@@ -1,4 +1,4 @@
 pandas == 1.0.0
-numpy == 1.18.1
+numpy == 1.22.0
 matplotlib == 2.2.5
 gym == 0.15.4
